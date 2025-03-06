@@ -9,7 +9,7 @@ import History from "../History";
 import FightRoom from "../FightRoom/";
 import ScrollToTopButton from "../../components/scrollToTopBtn/";
 import { socket } from "../../socket.js";
-import AuthApi from "../../Api/auth";
+import { AuthApi } from "../../Api/auth";
 
 const Wrapper = () => {
   const navigate = useNavigate();
