@@ -1,0 +1,14 @@
+.pokemon-card__stats {
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    &__icon {
+      text-shadow: 0 0 2px var(--text-color-contrast);
+    }
+
+    &__value {
+      text-shadow: 0 0 3px var(--text-color-contrast);
+    }
+  }
+}

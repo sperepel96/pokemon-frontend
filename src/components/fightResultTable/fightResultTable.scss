@@ -1,0 +1,16 @@
+.fight-result-container {
+  height: 200px;
+  table {
+    thead {
+      tr {
+        height: 35px;
+        position: sticky;
+        top: -1px;
+        background: var(--secondary-color);
+        th {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

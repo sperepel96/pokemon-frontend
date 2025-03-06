@@ -1,0 +1,97 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  &__navbar {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 0 20px;
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid var(--border-color);
+      &__title {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        &__text {
+          font-size: 32px;
+
+          font-weight: 600;
+        }
+        &__subtitle {
+          font-size: 18px;
+        }
+      }
+      &__actions {
+        display: flex;
+        gap: 10px;
+        button {
+          height: 60px;
+        }
+      }
+    }
+    &__body {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+
+      &__search {
+        input {
+          color: var(--text-color);
+        }
+        width: 300px;
+      }
+      &__actions {
+        .btn {
+          height: 50px;
+        }
+      }
+
+      &__filter {
+        display: flex;
+        margin-left: auto;
+
+        .react-select-container {
+          min-width: 300px;
+          color: var(--text-color-dark);
+        }
+      }
+
+      &__sort {
+        &__sort-by {
+          min-width: 200px;
+        }
+        &__order {
+          min-width: 150px;
+        }
+        .react-select__menu {
+          color: var(--text-color-dark);
+        }
+
+        display: flex;
+        gap: 10px;
+      }
+    }
+  }
+
+  &__pokemons {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+  }
+}

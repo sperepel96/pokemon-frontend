@@ -1,0 +1,32 @@
+.custom-select {
+  &__types {
+    display: flex;
+    gap: 2px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    .chip {
+      height: 20px;
+      margin: 0;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.8;
+    }
+    .noEffect {
+      background: var(--disabled-color);
+      color: var(--disabled-text-color);
+    }
+
+    .ineffective {
+      background: var(--error-color);
+      color: var(--error-text-color);
+    }
+
+    .effective {
+      background: var(--success-color);
+      color: var(--success-text-color);
+    }
+  }
+}
