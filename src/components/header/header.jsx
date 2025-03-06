@@ -4,10 +4,23 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   const [collapsed, setCollapsed] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <>
-      <div className={`header ${collapsed ? "header--collapsed" : ""}`}>
+      <div
+        className={"mobile-menu-trigger"}
+        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+      >
+        <i className={`fas ${mobileMenuOpen ? "fa-times" : "fa-bars"}`} />
+      </div>
+
+      <div
+        className={`header ${collapsed ? "header--collapsed" : ""} ${
+          mobileMenuOpen ? "header--active" : ""
+        }
+`}
+      >
         <div className={"header__logo"}>
           <i className="fab fa-steam-square"></i>
         </div>

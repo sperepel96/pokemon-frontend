@@ -14,3 +14,10 @@
     }
   }
 }
+
+@media (pointer: coarse) and (max-width: 968px) {
+  .fight-result-container {
+    height: unset;
+    max-height: 200px;
+  }
+}

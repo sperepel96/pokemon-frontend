@@ -1,3 +1,6 @@
+.mobile-menu-trigger {
+  display: none;
+}
 .header {
   position: relative;
   height: 100vh;
@@ -120,5 +123,50 @@
       transform: rotate(180deg);
     }
     color: var(--primary-color-contrast);
+  }
+}
+@media (pointer: coarse) and (max-width: 968px) {
+  .header {
+    position: fixed;
+    height: 100%;
+    width: 300px;
+    transform: translateX(-105%);
+    z-index: 10;
+    box-shadow: 2px 0 5px var(--secondary-color);
+    transition: transform 0.3s ease;
+
+    &--active {
+      transform: translateX(0);
+    }
+
+    .collapsible-header-trigger {
+      display: none;
+    }
+    &__menu {
+      &-item {
+        padding: 15px 10px;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .mobile-menu-trigger {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-color-contrast);
+    transition: all 0.2s ease;
+    z-index: 11;
+    border-radius: 0 0 0 5px;
+
+    i {
+      font-size: 32px;
+    }
   }
 }

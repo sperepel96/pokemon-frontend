@@ -59,4 +59,13 @@
       }
     }
   }
+  @media (max-width: 768px) {
+    &__card {
+      padding: 20px;
+      max-width: 90%;
+    }
+    .btn {
+      width: 100%;
+    }
+  }
 }

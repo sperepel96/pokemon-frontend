@@ -150,3 +150,27 @@
     }
   }
 }
+@media (pointer: coarse) and (max-width: 968px) {
+  #toast-container {
+    display: none;
+  }
+  .fight-room {
+    &__header {
+      flex-direction: column;
+      &__text {
+        text-align: center;
+        &__subtitle {
+        }
+        &__title {
+          text-wrap: balance;
+          word-break: break-all;
+          overflow-wrap: break-word;
+        }
+      }
+    }
+    &__pokemons {
+      flex-direction: column;
+      //display: none;
+    }
+  }
+}

@@ -14,3 +14,10 @@
     overflow: auto;
   }
 }
+@media (pointer: coarse) and (max-width: 968px) {
+  .wrapper {
+    .page-container {
+      padding: 5px;
+    }
+  }
+}
