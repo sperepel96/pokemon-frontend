@@ -42,8 +42,6 @@ export const Home = () => {
   ];
   const bottomRef = useRef(null);
   const resetAndFetchPokemons = async () => {
-    console.log("reset");
-    console.log(page);
     setPage(1);
     setPokemons([]);
     setFirstLoad(true);
@@ -66,7 +64,6 @@ export const Home = () => {
       });
       const newPokemons = response?.pokemons || [];
       setPokemons((prevPokemons) => [...prevPokemons, ...newPokemons]);
-      console.log(response);
       if (newPokemons.length < limit) {
         console.log("No more data");
         setHasMore(false);

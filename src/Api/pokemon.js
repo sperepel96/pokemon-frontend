@@ -3,7 +3,7 @@ import config from "../config/config.js";
 
 const API = axios.create({
   baseURL: config.BASE_URL + "/pokemons",
-  timeout: 5000,
+  timeout: 100000,
 });
 
 API.interceptors.request.use((config) => {

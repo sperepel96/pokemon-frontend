@@ -3,7 +3,7 @@ import config from "../config/config.js";
 
 const API = axios.create({
   baseURL: config.BASE_URL + "/auth",
-  timeout: 5000,
+  timeout: 100000,
 });
 
 export const AuthApi = {

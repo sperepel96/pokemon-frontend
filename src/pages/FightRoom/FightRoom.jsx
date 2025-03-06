@@ -1,6 +1,6 @@
 import "./FightRoom.scss";
 import { useEffect, useState } from "react";
-import { socket } from "../../socket.js";
+import { socket } from "../../config/socket.js";
 import { useParams } from "react-router-dom";
 import { PokemonApi } from "../../Api/pokemon.js";
 import Pokemon from "../../components/pokemon/card";
@@ -21,13 +21,6 @@ const FightRoom = () => {
 
   const [result, setResult] = useState(undefined);
   const [logs, setLogs] = useState([]);
-  useEffect(() => {
-    socket.connect();
-    return () => {
-      socket.disconnect();
-    };
-  }, []);
-
   useEffect(() => {
     if (loading) {
       return;

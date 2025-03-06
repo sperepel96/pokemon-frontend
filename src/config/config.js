@@ -1,6 +1,6 @@
 const config = {
-  BASE_URL: "https://pokemon-backend-fjyr.onrender.com:5000/api",
-  SOCKET_URL: "ws://pokemon-backend-fjyr.onrender.com:5001",
+  BASE_URL: "https://distinguished-ruperta-stepan-dev-f2f767c3.koyeb.app/api",
+  SOCKET_URL: "wss://distinguished-ruperta-stepan-dev-f2f767c3.koyeb.app",
 };
 
 export default config;

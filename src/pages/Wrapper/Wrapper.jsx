@@ -1,20 +1,19 @@
-import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import Sandbox from "../Sandbox/index.jsx";
 import Home from "../Home";
 import MyAcсount from "../MyAcount";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import Header from "../../components/header";
 import "./Wrapper.scss";
 import History from "../History";
 import FightRoom from "../FightRoom/";
 import ScrollToTopButton from "../../components/scrollToTopBtn/";
-import { socket } from "../../socket.js";
 import { AuthApi } from "../../Api/auth";
+import { connectSocket, socket } from "../../config/socket.js";
 
 const Wrapper = () => {
   const navigate = useNavigate();
   const containerRef = useRef(null);
-  const location = useLocation();
 
   const token = localStorage.getItem("token") || null;
   const fetchProfile = async () => {
@@ -35,11 +34,9 @@ const Wrapper = () => {
 
   useEffect(() => {
     fetchProfile();
-  }, [token]);
-
-  useEffect(() => {
-    console.log("socket connect");
-    socket.connect();
+    if (token) {
+      connectSocket(token);
+    }
     return () => {
       socket.disconnect();
     };

@@ -31,7 +31,7 @@ const Login = () => {
     );
     const { token } = await AuthApi.verify(accounts[0], signature);
     localStorage.setItem("token", token);
-    navigate("/");
+    navigate("/", { replace: true });
   };
 
   useEffect(() => {

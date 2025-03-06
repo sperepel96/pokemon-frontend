@@ -32,7 +32,7 @@ const History = () => {
         limit: limit,
         sortOrder: selectedSortOrder,
       });
-      console.log(response);
+
       const newFights = response?.data?.fights || [];
       setFights((prevFights) => [...prevFights, ...newFights]);
 
