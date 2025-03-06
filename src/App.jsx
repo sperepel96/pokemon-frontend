@@ -6,8 +6,8 @@ import "materialize-css/dist/js/materialize.js";
 import "rc-collapse/assets/index.css";
 import M from "materialize-css";
 import { useEffect } from "react";
-import Login from "./pages/Login/index.jsx";
-import { Wrapper } from "./pages/Wrapper/index.jsx";
+import Login from "./pages/Login";
+import Wrapper from "./pages/Wrapper";
 
 function App() {
   useEffect(() => {
