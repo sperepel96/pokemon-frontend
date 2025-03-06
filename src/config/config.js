@@ -1,6 +1,6 @@
 const config = {
-  BASE_URL: "http://localhost:5000/api",
-  SOCKET_URL: "ws://localhost:5001",
+  BASE_URL: "https://pokemon-backend-fjyr.onrender.com:5000/api",
+  SOCKET_URL: "ws://pokemon-backend-fjyr.onrender.com:5001",
 };
 
 export default config;
